@@ -1,5 +1,6 @@
 class PlantsController < ApplicationController
-    
+    skip_before_action :auth_buyer, only: [:index, :create]
+
     def show
         @plant = Plant.find(params[:id])
     end
@@ -25,7 +26,4 @@ class PlantsController < ApplicationController
         params.require(:plant).permit(:name, :size, :description, :price, :quantity, :img_url)
     end
 
-    # def find_plant
-    #     @plant = Plant.find(params[:id])
-    # end
 end

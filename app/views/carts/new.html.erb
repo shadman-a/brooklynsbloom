@@ -1,0 +1,12 @@
+<h1>Add to cart</h1>
+
+<%= form_for @cart do |f| %>
+    <%= f.label :buyer_id %>
+    <%= f.collection_select :buyer_id, @buyers, :id, :name %>
+
+    <%= f.label :plant_id%>
+    <%= f.collection_select :plant_id, @plants, :id, :name %>
+
+    <%= f.submit %>
+
+<% end %>
