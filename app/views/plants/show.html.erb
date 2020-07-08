@@ -6,3 +6,5 @@
 <p>Desciption: <%= @plant.description %></p>
 <p>Available: <%= @plant.quantity%></p>
 <img src="<%=@plant.img_url%>" alt="profile pic">
+
+<%= button_to "Buy", new_cart_path(@cart), method: :get %>

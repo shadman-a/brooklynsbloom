@@ -1,7 +1,4 @@
 <h1>Show Page</h1>
 
-<p>Name: <%= @buyer.name%></p>
-<p>Occupation: <%= @buyer.address %></p>
-<img src="<%=@buyer.img_url%>" alt="profile pic">
-
-<%end%>
+<p>Purchased?: <%= @cart.purchased%></p>
+<p>Buyer: <%= @cart.buyer.id %></p>

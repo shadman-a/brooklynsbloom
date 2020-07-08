@@ -1,8 +1,8 @@
-<h1> Our loyal customers! </h1>
+<h1> Our loyal carts! </h1>
 
 
 <ul>
-  <% @buyers.each do |buyer| %>
-    <li> <%= link_to buyer.name, buyer_path(buyer.id) %> </li>
+  <% @cart.each do |cart| %>
+    <li> <%= link_to cart.created_at, cart_path(cart.id) %> </li>
   <% end %>
 </ul>

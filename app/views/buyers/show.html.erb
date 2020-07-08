@@ -4,3 +4,14 @@
 <p>Occupation: <%= @buyer.address %></p>
 <img src="<%=@buyer.img_url%>" alt="profile pic">
 
+<h1><%= @buyer.password%></h1>
+
+<h2>My Plants</h2>
+
+<% @buyer.plants.each do |plant| %>
+  <li> <%= link_to plant.name, plant_path(plant.id) %> </li>
+<% end %>
+
+<br><%= link_to "Edit Profile", edit_buyer_path(@buyer) %>
+
+<%= button_to "Delete Profile", buyer_path(@buyer), method: :delete %>

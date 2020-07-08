@@ -10,6 +10,26 @@
   </head>
 
   <body>
+        <div class='nav'>
+          <img class='logo' src="https://i.pinimg.com/originals/9b/82/8e/9b828e532b44c1524be8b13f95ba503d.png" alt="cc" width="200" height="400">
+      </div>
+
+      <ul>
+        <li><%= link_to 'Buyer Home', buyers_path %></li>
+        <li><%= link_to 'Plants Home', plants_path %></li>
+        <li><%= link_to 'New Buyer', new_buyer_path %></li>
+
+        <% if @current_user %>
+          <li class='right'>Welcome! <%= @current_buyer.name %></li>
+          <li class='right'><%= link_to "log-out", sessions_logout_path, method: :delete %></li>
+        <% else %>
+          <li class='right'><%= link_to 'Sign-up', new_buyer_path %></li>
+          <li class='right'><%= link_to 'login', new_login_path %></li>
+        <% end %>
+        
+      </ul>
+    
+
     <%= yield %>
   </body>
 </html>
