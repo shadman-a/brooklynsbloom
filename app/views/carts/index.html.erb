@@ -1,0 +1,8 @@
+<h1> Our loyal customers! </h1>
+
+
+<ul>
+  <% @buyers.each do |buyer| %>
+    <li> <%= link_to buyer.name, buyer_path(buyer.id) %> </li>
+  <% end %>
+</ul>

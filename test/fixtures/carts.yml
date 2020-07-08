@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  buyer: one
+  plant: one
+  purchased: false
+
+two:
+  buyer: two
+  plant: two
+  purchased: false
