@@ -18,7 +18,6 @@ class SessionsController < ApplicationController
 
   def logout
     session.delete(:buyer_id)
-
     redirect_to buyers_path
   end 
     

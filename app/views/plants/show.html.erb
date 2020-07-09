@@ -1,3 +1,5 @@
+<div class="container">
+
 <h1>Show Page</h1>
 
 <p>Name: <%= @plant.name%></p>
@@ -7,4 +9,6 @@
 <p>Available: <%= @plant.quantity%></p>
 <img src="<%=@plant.img_url%>" alt="profile pic">
 
-<%= button_to "Buy", new_cart_path(@cart), method: :get %>
+<%= button_to "Buy", new_cart_path(@cart), method: :get, params: {plant: @plant} %>
+
+</div>

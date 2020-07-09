@@ -1,11 +1,11 @@
 <h1>Add to cart</h1>
 
 <%= form_for @cart do |f| %>
-    <%= f.label :buyer_id %>
-    <%= f.collection_select :buyer_id, @buyers, :id, :name %>
+   <%= f.label "Confirm Purchase: #{@plant.name}" %>
+   <br> <%= f.hidden_field  :buyer_id, value: @current_buyer.id %>
 
-    <%= f.label :plant_id%>
-    <%= f.collection_select :plant_id, @plants, :id, :name %>
+  
+    <%= f.hidden_field  :plant_id, value: @plant.id  %>
 
     <%= f.submit %>
 

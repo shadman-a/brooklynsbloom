@@ -1,5 +1,5 @@
 class PlantsController < ApplicationController
-    skip_before_action :auth_buyer, only: [:index, :create]
+    skip_before_action :auth_buyer
 
     def show
         @plant = Plant.find(params[:id])

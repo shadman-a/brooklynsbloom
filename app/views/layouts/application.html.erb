@@ -15,10 +15,10 @@
       </div>
 
       <ul>
-        <li><%= link_to 'Buyer Home', buyers_path %></li>
         <li><%= link_to 'Plants Home', plants_path %></li>
-        <li><%= link_to 'New Buyer', new_buyer_path %></li>
+        <li><%= link_to 'Buyer Home', buyers_path %></li>
         <li><%= link_to 'About', "/shops/1" %></li>
+        <li class='right'><%= link_to "Cart", carts_path %> </li>
 
         <% if @current_buyer %>
           <li class='right'>Welcome! <%= @current_buyer.name %></li>

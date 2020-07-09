@@ -1,4 +1,6 @@
 <h1>Show Page</h1>
 
 <p>Purchased?: <%= @cart.purchased%></p>
-<p>Buyer: <%= @cart.buyer.id %></p>
+<p>Buyer: <%= @cart.buyer.name %></p>
+<h3>Plants:</h3>
+<%= @cart.plant.name %>

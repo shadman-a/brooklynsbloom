@@ -4,6 +4,7 @@ class CartsController < ApplicationController
     @cart = Cart.new
     @buyers = Buyer.all
     @plants = Plant.all
+    @plant = Plant.find(params[:plant])
   end
 
   def index

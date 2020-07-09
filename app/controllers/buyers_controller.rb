@@ -1,6 +1,6 @@
 class BuyersController < ApplicationController
     before_action :find_planet, only: [:name, :show, :edit, :update]
-    skip_before_action :auth_buyer, only: [:new, :create, :index]
+    skip_before_action :auth_buyer, only: [:new, :create]
 
 
     def index
