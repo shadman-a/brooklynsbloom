@@ -20,7 +20,7 @@
         <li><%= link_to 'New Buyer', new_buyer_path %></li>
         <li><%= link_to 'About', "/shops/1" %></li>
 
-        <% if @current_user %>
+        <% if @current_buyer %>
           <li class='right'>Welcome! <%= @current_buyer.name %></li>
           <li class='right'><%= link_to "log-out", sessions_logout_path, method: :delete %></li>
         <% else %>
