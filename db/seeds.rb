@@ -1,7 +1,7 @@
-# Buyer.destroy_all
-# Shop.destroy_all
-# Plant.destroy_all
-# Cart.destroy_all
+Buyer.destroy_all
+Shop.destroy_all
+Plant.destroy_all
+Cart.destroy_all
 
 
 Buyer.create(name: Faker::Name.female_first_name, address: Faker::Address.full_address, img_url: "https://images.pexels.com/photos/1897590/pexels-photo-1897590.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
