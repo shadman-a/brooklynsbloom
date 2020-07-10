@@ -1,14 +1,20 @@
-<div class="container">
 
-<h1>Show Page</h1>
 
-<p>Name: <%= @plant.name%></p>
-<p>Size: <%= @plant.size %></p>
-<p>Price: <%= @plant.price%></p>
-<p>Desciption: <%= @plant.description %></p>
-<p>Available: <%= @plant.quantity%></p>
-<img src="<%=@plant.img_url%>" alt="profile pic">
-
-<%= button_to "Buy", new_cart_path(@cart), method: :get, params: {plant: @plant} %>
-
+<div class="text-center container">
+<div class="grid-container">
+<div class="Left">
+<h2> <%= @plant.name%></h2>
+<img class="index-show" src="<%=@plant.img_url%>" alt="plant pic"><br>
 </div>
+
+<div class="Right">
+<br><br><br><br>
+<p>Description: <%= @plant.description %></p>
+<p>Size: <%= @plant.size %></p>
+<p>Brightness: <%= @plant.brightness%></p>
+<h4><p>Price: $<%= @plant.price%>.95</p></h4>
+<%= button_to "Buy", new_cart_path(@cart), method: :get, params: {plant: @plant} %>
+</div>
+</div>
+</div>
+

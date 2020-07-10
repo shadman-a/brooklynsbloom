@@ -1,18 +1,25 @@
-<h1>Show Page</h1>
-<div class="index-container">
-<div class="index-tile">
-<p>Name: <%= @buyer.name%></p>
-<p>Address: <%= @buyer.address %></p>
-<img class="index-img" src="<%=@buyer.img_url%>" alt="profile pic">
 
-<h2>My Plants</h2>
 
+<div class="mx-auto text-center">
+<div class="container">
+<div class="grid-container">
+  <div class="Left">
+<h1><%= @buyer.name%></h1>
+<h3>Address: <%= @buyer.address %></h3>
+<img class="index-show" src="<%=@buyer.img_url%>" alt="profile pic">
+  </div>
+  <div class="Right">
+<br><br><br><br><h2>My Plants</h2>
 <% @buyer.plants.each do |plant| %>
   <li> <%= link_to plant.name, plant_path(plant.id) %> </li>
 <% end %>
-</div>
+<br><br><%= button_to "Edit Profile", edit_buyer_path(@buyer), method: :get %>
+<br><%= button_to "Delete Profile", buyer_path(@buyer), method: :delete %>
+  </div>
 </div>
 
-<%= link_to "Edit Profile", edit_buyer_path(@buyer) %>
 
-<%= button_to "Delete Profile", buyer_path(@buyer), method: :delete %>
+<br>
+
+
+ </div>

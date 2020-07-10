@@ -5,7 +5,7 @@ class CreatePlants < ActiveRecord::Migration[6.0]
       t.string :description
       t.string :size
       t.integer :price
-      t.integer :quantity
+      t.string :brightness
       t.string :img_url
       t.belongs_to :shop, null: false, foreign_key: true
 

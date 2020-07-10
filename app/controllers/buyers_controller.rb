@@ -1,6 +1,6 @@
 class BuyersController < ApplicationController
     before_action :find_planet, only: [:name, :show, :edit, :update]
-    skip_before_action :auth_buyer, only: [:new, :create]
+    skip_before_action :auth_buyer, only: [:new, :create, :destroy]
 
 
     def index
@@ -38,7 +38,7 @@ class BuyersController < ApplicationController
             session[:buyer_id] = @buyer.id
             redirect_to @buyer
           else
-            flash[:errors] = @buyer.errors.full_messages 
+            flash[:my_errors] = @buyer.errors.full_messages 
             redirect_to new_buyer_path  
         end 
     end 
@@ -46,7 +46,6 @@ class BuyersController < ApplicationController
     def destroy
         @buyer = Buyer.find(params[:id])
         @buyer.destroy
-
         redirect_to buyers_path
     end
     

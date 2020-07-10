@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_07_08_030657) do
     t.string "description"
     t.string "size"
     t.integer "price"
-    t.integer "quantity"
+    t.string "brightness"
     t.string "img_url"
     t.integer "shop_id", null: false
     t.datetime "created_at", precision: 6, null: false

@@ -1,11 +1,35 @@
-<h1> Here's all our plants! </h1>
+<div class="container mx-auto text-right">
+<%# <%= form_tag(plant_path, method: :get) %> 
+<%# <%= text_field_tag(:search, params[:search]) %> 
+<%# <%= submit_tag ("Search") %> 
+<%# <% end %> 
+</div>
 
-<div class="index-container">
-   <p><% @plants.each do |plant| %> </p>
-<div class="index-tile">
-   <%= link_to plant.name, plant_path(plant.id) %> 
-    <img class="index-img" src="<%= plant.img_url %>">
-  </div>  
+<div class="container mx-auto text-right">
+  <%= form_tag('/plants', method: 'get') do %>
+    <h6> How Much Sunshine?: <%= select_tag "brightness", options_for_select(["High", "Medium", "Low"]), include_blank: true %> <%=submit_tag 'Filter'%></h6> 
+    
   <% end %>
 </div>
 
+<section id="projects" class="projects-section bg-light">
+  <div class="container">
+
+
+
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="index-container">
+     <% @plants.each do |plant| %> 
+     <div class="index-tile">
+        <img class="img-fluid" src="<%= plant.img_url %>">
+        <h4 class="text-bl"> <%= link_to plant.name, plant_path(plant.id) %> </h4>
+      </div>
+        <% end %>
+      </div>
+      </div>
+    </div>
+
+   
+
+  </div>
+</section>

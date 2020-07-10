@@ -1,7 +1,14 @@
-<h1> Our loyal customers! </h1>
-
-<div class="chip">
-  <% @buyers.each do |buyer| %>
-    <li> <%= link_to buyer.name, buyer_path(buyer.id) %> </li>
-  <% end %>
+ <div class="mx-auto text-center">
+ <h4> Plant Lovers Club </h4>
+   <section id="projects" class="projects-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="index-container">
+     <% @buyers.each do |buyer| %> 
+     <div class="index-tile">
+        <img class="img-fluid" src="<%= buyer.img_url %>">
+        <h4 class="text-bl"> <%= link_to buyer.name, buyer_path(buyer.id) %> </h4>
+      </div>
+        <% end %>
+      </div>
 </div>

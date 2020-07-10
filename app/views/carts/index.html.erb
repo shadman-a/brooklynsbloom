@@ -1,8 +1,10 @@
-<h1> Your Cart </h1>
 
 
-<ul>
+<div class="mx-auto text-center">
+
+<h1> Your Cart: </h1>
+
   <% @carts.each do |cart| %>
     <li> <%= link_to cart.plant.name, cart_path(cart.id) %> </li>
   <% end %>
-</ul>
+

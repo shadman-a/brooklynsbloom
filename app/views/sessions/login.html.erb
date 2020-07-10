@@ -1,9 +1,21 @@
+<div class='error container'>
+<% if flash[:my_errors] %>
+	<% flash[:my_errors].each do |error| %>      
+<p><%= error %></p>   
+ <% end %>  
+<% end %>
+</div>
+
+<div class="mx-auto text-center">
+<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/plants-in-pots-royalty-free-image-1574464255.jpg?crop=1.00xw:0.752xh;0,0.0649xh&resize=1200:*" height="400" width="700">
+<br><img src="https://icon-library.com/images/white-lock-icon-png/white-lock-icon-png-14.jpg" width="100" height="100">
 <%= form_for :session, url: '/sessions' do |f|  %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
   <%= f.label :password%>
-  <%= f.text_field :password%>
+  <%= f.password_field :password%>
 
-  <%= f.submit %>
+  <%= f.submit "Login" %>
 <% end %>
+</div>

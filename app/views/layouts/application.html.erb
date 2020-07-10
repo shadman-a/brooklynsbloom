@@ -5,32 +5,98 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
-        <div class='nav'>
-          <img class='logo' src="https://i.pinimg.com/originals/9b/82/8e/9b828e532b44c1524be8b13f95ba503d.png" alt="cc" width="200" height="400">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Brooklyn's Bloom</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" <%= link_to 'Home', plants_path %></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" <%= link_to 'Profile', buyers_path %></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" <%= link_to 'About', "/shops/1" %></a>
+            </li>
+            <% if @current_buyer %>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" Welcome! <%= @current_buyer.name %></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" <%= link_to "Log-out", sessions_logout_path, method: :delete %></a>
+            </li>
+            <% else %>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" <%= link_to 'Sign-up', new_buyer_path %></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger"
+               <%= link_to 'Login', new_login_path %></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" <%= link_to 'Cart', carts_path %></a>
+            </li>
+            <% end %>
+          </ul>
+        </div>
       </div>
-
-      <ul>
-        <li><%= link_to 'Plants Home', plants_path %></li>
-        <li><%= link_to 'Buyer Home', buyers_path %></li>
-        <li><%= link_to 'About', "/shops/1" %></li>
-        <li class='right'><%= link_to "Cart", carts_path %> </li>
-
-        <% if @current_buyer %>
-          <li class='right'>Welcome! <%= @current_buyer.name %></li>
-          <li class='right'><%= link_to "log-out", sessions_logout_path, method: :delete %></li>
-        <% else %>
-          <li class='right'><%= link_to 'Sign-up', new_buyer_path %></li>
-          <li class='right'><%= link_to 'login', new_login_path %></li>
-        <% end %>
-        
-      </ul>
-    
+    </nav>
+  
+<header class="masthead">
+  <div class="container d-flex h-300 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0"></h1>
+      <h2 class="text-black-80 mx-auto mt-2 mb-3"> </h2>
+      <p class="text-black-50 mb-0">Love your plants and they'll love you back... but add water & sunshine</p>
+    </div>
+    <div class="col-xl-5 col-lg-8">
+        <img class="img-fluid mb-3 mb-lg-0" src="https://i.ibb.co/1TFvbQm/screen-shot-2020-07-08-at-7-26-04-pm.png" alt="">
+      </div>
+  </div>
+</header>
 
     <%= yield %>
-  </body>
+    <%= yield(:search) %>
+
+ 
+
+  <!-- Footer -->
+    <footer class="bg-black small text-center text-black-50">
+      <div class="container">
+        <br> Copyright &copy; Dolly & Shadman 2020
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="http://blackrockdigital.github.io/startbootstrap-grayscale/vendor/jquery/jquery.min.js"></script>
+    <script src="http://blackrockdigital.github.io/startbootstrap-grayscale/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://blackrockdigital.github.io/startbootstrap-grayscale/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="http://blackrockdigital.github.io/startbootstrap-grayscale/js/grayscale.min.js"></script>
+ </body>
 </html>
+
+
+

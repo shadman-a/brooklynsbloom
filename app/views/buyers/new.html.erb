@@ -1,17 +1,34 @@
-<h1>Make a New Account</h1>
 
+
+<div class="mx-auto text-center">
+<h1>Create Account</h1>
+<img src="https://i.ibb.co/fC4dgTQ/maxresdefault.jpg" >
+<br>
+<br>
+</div>
+<div class='error container'>
+<% if flash[:my_errors] %>
+	<% flash[:my_errors].each do |error| %>      
+<p><%= error %></p>   
+ <% end %>  
+<% end %>
+</div>
+<div class="mx-auto text-center">
 <%= form_for @buyer do |f|  %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
   <%= f.label :address %>
-  <%= f.text_area :address %>
+  <%= f.text_field :address %>
 
   <%= f.label :password %>
-  <%= f.text_field :password%>
+  <%= f.password_field :password%>
 
   <%= f.label :img_url %>
   <%= f.text_field :img_url %>
 
-  <%= f.submit %>
+  <br><br><%= f.submit %>
 <% end %>
+
+  </div>
+</section>

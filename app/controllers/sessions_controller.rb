@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   skip_before_action :auth_buyer, only: [:login, :create]
 
-  def login 
+  def login
   end 
 
   def create
