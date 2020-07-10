@@ -1,14 +1,19 @@
-<div class="container">
+<br>
+<br>
+<br>
+<br>
 
-<h1>Show Page</h1>
+<div class="mx-auto text-center">
 
-<p>Name: <%= @plant.name%></p>
+
+<br><h2> <%= @plant.name%></h2><br>
 <p>Size: <%= @plant.size %></p>
-<p>Price: <%= @plant.price%></p>
+<p>Price: $<%= @plant.price%>.95</p>
 <p>Desciption: <%= @plant.description %></p>
 <p>Available: <%= @plant.quantity%></p>
-<img src="<%=@plant.img_url%>" alt="profile pic">
 
-<%= button_to "Buy", new_cart_path(@cart), method: :get, params: {plant: @plant} %>
+<img class="index-mild" src="<%=@plant.img_url%>" alt="plant pic"><br>
+
+<br><%= button_to "Buy", new_cart_path(@cart), method: :get, params: {plant: @plant} %>
 
 </div>

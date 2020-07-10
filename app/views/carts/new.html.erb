@@ -1,12 +1,17 @@
-<h1>Add to cart</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="mx-auto text-center">
+<img src="https://i.ibb.co/VBzbYVy/chairs-contemporary-cosy-930004.jpg">
 
 <%= form_for @cart do |f| %>
    <%= f.label "Confirm Purchase: #{@plant.name}" %>
-   <br> <%= f.hidden_field  :buyer_id, value: @current_buyer.id %>
-
-  
+   <%= f.hidden_field  :buyer_id, value: @current_buyer.id %>
     <%= f.hidden_field  :plant_id, value: @plant.id  %>
 
-    <%= f.submit %>
+    <br><%= f.submit "Confirm" %>
 
 <% end %>
+</div>

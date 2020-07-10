@@ -38,7 +38,7 @@ class BuyersController < ApplicationController
             session[:buyer_id] = @buyer.id
             redirect_to @buyer
           else
-            flash[:errors] = @buyer.errors.full_messages 
+            flash[:my_errors] = @buyer.errors.full_messages 
             redirect_to new_buyer_path  
         end 
     end 

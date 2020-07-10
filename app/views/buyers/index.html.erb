@@ -1,7 +1,6 @@
-<h1> Our loyal customers! </h1>
-
-<div class="chip">
+ <div class="mx-auto text-center">
+ <br><br><br><br><h1> Our loyal customers! </h1>
   <% @buyers.each do |buyer| %>
-    <li> <%= link_to buyer.name, buyer_path(buyer.id) %> </li>
+    <h2><%= link_to buyer.name, buyer_path(buyer.id) %> </h2>
   <% end %>
 </div>

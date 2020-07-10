@@ -1,6 +1,14 @@
-<h1>Show Page</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="mx-auto text-center">
+<img src="https://i.ibb.co/4t5hr9r/Cart-icon-by-ahlangraphic-1-580x386.jpg" width='100' height='100'>
+<h1>Purchased </h1>
 
-<p>Purchased?: <%= @cart.purchased%></p>
 <p>Buyer: <%= @cart.buyer.name %></p>
-<h3>Plants:</h3>
-<%= @cart.plant.name %>
+<p>Date Purchased: <%= @cart.created_at %></p>
+<h3>Plant Bought: </h3>
+<h2><%= @cart.plant.name %></h2>
+</div>
