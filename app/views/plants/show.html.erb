@@ -8,10 +8,11 @@
 </div>
 
 <div class="Right">
-<br><br><br><br><p>Size: <%= @plant.size %></p>
-<p>Price: $<%= @plant.price%>.95</p>
-<p>Desciption: <%= @plant.description %></p>
+<br><br><br><br>
+<p>Description: <%= @plant.description %></p>
+<p>Size: <%= @plant.size %></p>
 <p>Brightness: <%= @plant.brightness%></p>
+<h4><p>Price: $<%= @plant.price%>.95</p></h4>
 <%= button_to "Buy", new_cart_path(@cart), method: :get, params: {plant: @plant} %>
 </div>
 </div>

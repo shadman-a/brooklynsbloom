@@ -7,7 +7,7 @@
 
 <div class="container mx-auto text-right">
   <%= form_tag('/plants', method: 'get') do %>
-    <h6> Filter Plants: <%= select_tag "brightness", options_for_select(["High", "Medium", "Low"]), include_blank: true %> <%=submit_tag 'Filter'%></h6> 
+    <h6> How Much Sunshine?: <%= select_tag "brightness", options_for_select(["High", "Medium", "Low"]), include_blank: true %> <%=submit_tag 'Filter'%></h6> 
     
   <% end %>
 </div>

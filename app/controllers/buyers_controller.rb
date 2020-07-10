@@ -1,6 +1,6 @@
 class BuyersController < ApplicationController
     before_action :find_planet, only: [:name, :show, :edit, :update]
-    skip_before_action :auth_buyer, only: [:new, :create]
+    skip_before_action :auth_buyer, only: [:new, :create, :destroy]
 
 
     def index
@@ -46,7 +46,6 @@ class BuyersController < ApplicationController
     def destroy
         @buyer = Buyer.find(params[:id])
         @buyer.destroy
-
         redirect_to buyers_path
     end
     
