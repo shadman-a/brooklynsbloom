@@ -1,25 +1,14 @@
-Buyer.destroy_all
-Shop.destroy_all
-Plant.destroy_all
-Cart.destroy_all
-
-
-Buyer.create(name: Faker::Name.female_first_name, address: Faker::Address.full_address, img_url: "https://images.pexels.com/photos/1897590/pexels-photo-1897590.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
-Buyer.create(name: Faker::Name.female_first_name, address: Faker::Address.full_address, img_url: "https://images.pexels.com/photos/4672731/pexels-photo-4672731.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
-Buyer.create(name: Faker::Name.female_first_name, address: Faker::Address.full_address, img_url: "https://images.pexels.com/photos/4503736/pexels-photo-4503736.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
-Buyer.create(name: Faker::Name.female_first_name, address: Faker::Address.full_address, img_url: "https://images.pexels.com/photos/4503733/pexels-photo-4503733.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
-Buyer.create(name: Faker::Name.female_first_name, address: Faker::Address.full_address, img_url: "https://images.pexels.com/photos/3621926/pexels-photo-3621926.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
-Buyer.create(name: Faker::Name.male_first_name, address: Faker::Address.full_address, img_url: "https://images.pexels.com/photos/3182771/pexels-photo-3182771.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
-
 Shop.create(name: "Brooklyn's Bloom", username: "Owner", password_digest: "Brooklyn")
 
-Plant.create(name: "ZZ Plant", size: "Large", description: "Easy care", price: 15, quantity: 70, shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/3952024/pexels-photo-3952024.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
-Plant.create(name: "Eucalyptus", size: "medium", description: "Easy care", price: 20, quantity: 5, shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/2069428/pexels-photo-2069428.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
-Plant.create(name: "Snake Plant", size: "Large", description: "Easy care", price: 70, quantity: 4, shop_id: Shop.all.sample.id, img_url:"https://images.pexels.com/photos/2922353/pexels-photo-2922353.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
-Plant.create(name: "Monstera Deliciosa", size: "Large", description: "Bright indirect light", price: 100, quantity: 7, shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/2001154/pexels-photo-2001154.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
-Plant.create(name: "Mini Plant Haul", size: "Small", description: "Our best selling small plants includes 3 small starter plants", price: 50, quantity: 8, shop_id: Shop.all.sample.id,  img_url: "https://images.pexels.com/photos/1005058/pexels-photo-1005058.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
-Plant.create(name: "Succulent", size: "Small", description: "Lots of sunshine", price: 10, quantity: 20, shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/1903975/pexels-photo-1903975.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
-
-6.times do
-    Cart.create(buyer_id: Buyer.all.sample.id, plant_id: Plant.all.sample.id)
-end
+Plant.create(name: "ZZ Plant", size: "Large", description: "Put it anywhere & it will stil grow", price: 15, brightness: "Low", shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/3952024/pexels-photo-3952024.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
+Plant.create(name: "Snake Plant", size: "Large", description: "Will grow in the most tragic lighting condtions", price: 70, brightness: "Low", shop_id: Shop.all.sample.id, img_url:"https://images.pexels.com/photos/2922353/pexels-photo-2922353.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+Plant.create(name: "Monstera Deliciosa", size: "Large", description: "The bigger the plant, the more soil to buy", price: 100, brightness: "Low", shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/2001154/pexels-photo-2001154.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+Plant.create(name: "Fiddle Leaf Fig", size: "Large", description: "Fickle and fussy but once you love her right, she'll flourish.", price: 165, brightness: "Medium", shop_id: Shop.all.sample.id, img_url: "https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+Plant.create(name: "Cala Lily", size: "Medium", description: "You don't have to be getting married to want Cala Lillies around.", price: 50, brightness: "Medium", shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/2894962/pexels-photo-2894962.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
+Plant.create(name: "Bird of Paradise", size: "Large", description: "It's like you're in the Caribbean but except you're not, but I make you feel like it.", price: 80, brightness: "Medium", shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/1974508/pexels-photo-1974508.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+Plant.create(name: "Pothos", size: "Medium", description: "Not too fussy but I can be, would you like to find out?.", price: 30, brightness: "Medium", shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/2374967/pexels-photo-2374967.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
+Plant.create(name: "Rubber Plant", size: "Medium", description: "Not really rubber but I feel it.", price: 60, brightness: "Medium", shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/1831256/pexels-photo-1831256.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+Plant.create(name: "Bamboo Propagation", size: "Large", description: "Drink the Jack Daniels, then fill with water & trasfer to soil once roots develope. But do this sober.", price: 50, brightness: "High", shop_id: Shop.all.sample.id, img_url: "https://images.unsplash.com/photo-1564185322807-2cadb7f17c3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")
+Plant.create(name: "Eucalyptus", size: "Medium", description: "Put in shower for a spa like experience", price: 20, brightness: "Low", shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/2069428/pexels-photo-2069428.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+Plant.create(name: "Mini Plant Haul", size: "Small", description: "Our best selling small plants includes 3 small starter plants", price: 50, brightness: "Medium", shop_id: Shop.all.sample.id,  img_url: "https://images.pexels.com/photos/1005058/pexels-photo-1005058.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
+Plant.create(name: "Succulent", size: "Small", description: "Put me under the sun if you want me to thrive, or else....", price: 10, brightness: "High", shop_id: Shop.all.sample.id, img_url: "https://images.pexels.com/photos/1903975/pexels-photo-1903975.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")

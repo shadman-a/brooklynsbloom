@@ -1,5 +1,5 @@
  <div class="mx-auto text-center">
- <br><br><br><br><h1> Our loyal customers! </h1>
+ <h1> Our loyal customers! </h1>
   <% @buyers.each do |buyer| %>
     <h2><%= link_to buyer.name, buyer_path(buyer.id) %> </h2>
   <% end %>

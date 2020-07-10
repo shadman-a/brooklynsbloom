@@ -1,8 +1,10 @@
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class='error container'>
+<% if flash[:my_errors] %>
+	<% flash[:my_errors].each do |error| %>      
+<p><%= error %></p>   
+ <% end %>  
+<% end %>
+</div>
 
 <div class="mx-auto text-center">
 <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/plants-in-pots-royalty-free-image-1574464255.jpg?crop=1.00xw:0.752xh;0,0.0649xh&resize=1200:*" height="400" width="700">

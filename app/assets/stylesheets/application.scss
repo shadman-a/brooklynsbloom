@@ -40,3 +40,15 @@
     margin: 3px;
     background-color: white;
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "Left Left Right Right" "Left Left Right Right" ". . . .";
+  }
+  
+  .Left { grid-area: Left; }
+  
+  .Right { grid-area: Right; }

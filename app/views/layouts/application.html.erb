@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </head>
 
 <body>
@@ -43,7 +44,8 @@
               <a class="nav-link js-scroll-trigger" <%= link_to 'Sign-up', new_buyer_path %></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" <%= link_to 'Login', new_login_path %></a>
+              <a class="nav-link js-scroll-trigger"
+               <%= link_to 'Login', new_login_path %></a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" <%= link_to 'Cart', carts_path %></a>
@@ -54,9 +56,22 @@
       </div>
     </nav>
   
-
+<header class="masthead">
+  <div class="container d-flex h-300 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0"></h1>
+      <h2 class="text-black-80 mx-auto mt-2 mb-3"> </h2>
+      <p class="text-black-50 mb-0">Love your plants and they'll love you back... but add water & sunshine</p>
+    </div>
+    <div class="col-xl-5 col-lg-8">
+        <img class="img-fluid mb-3 mb-lg-0" src="https://i.ibb.co/1TFvbQm/screen-shot-2020-07-08-at-7-26-04-pm.png" alt="">
+      </div>
+  </div>
+</header>
 
     <%= yield %>
+    <%= yield(:search) %>
+
  
 
   <!-- Footer -->

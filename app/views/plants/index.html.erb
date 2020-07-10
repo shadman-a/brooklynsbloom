@@ -1,24 +1,22 @@
-<header class="masthead">
-  <div class="container d-flex h-300 align-items-center">
-    <div class="mx-auto text-center">
-      <h1 class="mx-auto my-0"></h1>
-      <h2 class="text-black-80 mx-auto mt-2 mb-5">Lorem Ipsum Novo</h2>
-      <p class="text-black-50 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="col-xl-5 col-lg-8">
-        <img class="img-fluid mb-3 mb-lg-0" src="https://i.ibb.co/1TFvbQm/screen-shot-2020-07-08-at-7-26-04-pm.png" alt="">
-      </div>
-  </div>
-</header>
+<div class="container mx-auto text-right">
+<%# <%= form_tag(plant_path, method: :get) %> 
+<%# <%= text_field_tag(:search, params[:search]) %> 
+<%# <%= submit_tag ("Search") %> 
+<%# <% end %> 
+</div>
 
-
+<div class="container mx-auto text-right">
+  <%= form_tag('/plants', method: 'get') do %>
+    <h6> Filter Plants: <%= select_tag "brightness", options_for_select(["High", "Medium", "Low"]), include_blank: true %> <%=submit_tag 'Filter'%></h6> 
+    
+  <% end %>
+</div>
 
 <section id="projects" class="projects-section bg-light">
   <div class="container">
 
 
 
-    <!-- Project One Row -->
     <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
       <div class="index-container">
      <% @plants.each do |plant| %> 

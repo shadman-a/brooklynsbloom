@@ -1,19 +1,19 @@
-<br>
-<br>
-<br>
-<br>
-
-<div class="mx-auto text-center">
 
 
-<br><h2> <%= @plant.name%></h2><br>
-<p>Size: <%= @plant.size %></p>
+<div class="text-center container">
+<div class="grid-container">
+<div class="Left">
+<h2> <%= @plant.name%></h2>
+<img class="index-show" src="<%=@plant.img_url%>" alt="plant pic"><br>
+</div>
+
+<div class="Right">
+<br><br><br><br><p>Size: <%= @plant.size %></p>
 <p>Price: $<%= @plant.price%>.95</p>
 <p>Desciption: <%= @plant.description %></p>
-<p>Available: <%= @plant.quantity%></p>
-
-<img class="index-mild" src="<%=@plant.img_url%>" alt="plant pic"><br>
-
-<br><%= button_to "Buy", new_cart_path(@cart), method: :get, params: {plant: @plant} %>
-
+<p>Brightness: <%= @plant.brightness%></p>
+<%= button_to "Buy", new_cart_path(@cart), method: :get, params: {plant: @plant} %>
 </div>
+</div>
+</div>
+

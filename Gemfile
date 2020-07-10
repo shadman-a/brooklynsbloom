@@ -60,3 +60,5 @@ gem 'bcrypt'
 gem 'bootstrap', '~> 4.5.0'
 
 gem 'jquery-rails'
+
+gem 'ransack', github: 'activerecord-hackery/ransack'
