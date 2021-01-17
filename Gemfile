@@ -63,3 +63,7 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 
 gem 'pg', group: :production
 
+group :development, :test do 
+  gem 'sqlite3'
+end
+
