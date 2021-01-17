@@ -5,8 +5,6 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: :development
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -64,6 +62,4 @@ gem 'jquery-rails'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 
 gem 'pg', group: :production
-
-gem 'rails_12factor', group: :production
 
